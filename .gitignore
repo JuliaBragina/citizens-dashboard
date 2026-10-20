@@ -1,0 +1,31 @@
+# Логи
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Зависимости и результаты сборки
+node_modules
+dist
+dist-ssr
+coverage
+*.local
+
+# Локальные переменные окружения
+.env
+.env.*
+!.env.example
+
+# Настройки редакторов и системные файлы
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
