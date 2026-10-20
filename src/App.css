@@ -1,0 +1,16 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app__main {
+  flex: 1;
+  min-width: 0;
+
+}
+
+@media (max-width: 640px) {
+  .app {
+    flex-direction: column;
+  }
+}
