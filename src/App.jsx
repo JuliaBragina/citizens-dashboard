@@ -1,7 +1,8 @@
-import Sidebar from './components/Sidebar/Sidebar'
 import { Route, Routes } from 'react-router-dom'
-import Dashboard from './pages/Dashboard'
-import Citizens from './pages/Citizens'
+import Sidebar from './components/Sidebar/Sidebar'
+import Dashboard from './pages/Dashboard/Dashboard'
+import Citizens from './pages/Citizens/Citizens'
+import CitizenDetails from './pages/CitizenDetails/CitizenDetails'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/citizens" element={<Citizens />} />
+          <Route path="/citizens/:id" element={<CitizenDetails />} />
         </Routes>
       </main>
     </div>

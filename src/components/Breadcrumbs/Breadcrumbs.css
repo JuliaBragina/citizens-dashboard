@@ -1,0 +1,28 @@
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+}
+
+.breadcrumbs__separator,
+.breadcrumbs__current {
+  color: var(--color-muted);
+}
+
+.breadcrumbs__link,
+.breadcrumbs__current {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
