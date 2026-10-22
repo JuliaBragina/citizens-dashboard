@@ -1,0 +1,38 @@
+.bar-chart {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bar-chart__description {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.bar-chart__label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.bar-chart__value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.bar-chart__track {
+  height: 10px;
+  border-radius: 6px;
+  background: var(--color-background);
+  overflow: hidden;
+}
+
+.bar-chart__bar {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primary);
+}

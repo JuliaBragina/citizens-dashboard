@@ -23,7 +23,7 @@ function App() {
 
       <main className="app__main" id="main-content" tabIndex={-1}>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard citizens={citizens} />} />
           <Route path="/citizens" element={<Citizens citizens={citizens} />} />
           <Route path="/citizens/:id" element={<CitizenDetails citizens={citizens} onSave={saveCitizen} />} />
         </Routes>
