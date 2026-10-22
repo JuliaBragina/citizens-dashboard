@@ -17,3 +17,36 @@
   color: var(--color-muted);
 }
 
+.citizens-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+.citizens-filters__field {
+  display: grid;
+  flex: 1 1 180px;
+  min-width: 0;
+  gap: 8px;
+}
+
+.citizens-filters__label {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.citizens-filters__control {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
