@@ -1,6 +1,5 @@
 import DataTable from '../../components/DataTable/DataTable'
 import { formatDate } from '../../components/CitizenSections/sections'
-import { citizens } from '../../data/citizens'
 import './Citizens.css'
 
 const statusLabels = { active: 'На учёте', archived: 'В архиве' }
@@ -20,7 +19,7 @@ const columns = [
   },
 ]
 
-function Citizens() {
+function Citizens({ citizens }) {
   return (
     <section className="stack">
       <header>

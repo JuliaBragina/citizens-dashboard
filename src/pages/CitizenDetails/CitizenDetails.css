@@ -123,3 +123,19 @@
   border-radius: 8px;
   background: var(--color-surface);
 }
+
+.citizen-details__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.citizen-details__cancel {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.citizen-details__cancel:hover:not(:disabled) {
+  background: var(--color-background);
+}
