@@ -1,3 +1,9 @@
+.breadcrumbs {
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: var(--color-surface);
+}
+
 .breadcrumbs__list {
   display: flex;
   flex-wrap: wrap;

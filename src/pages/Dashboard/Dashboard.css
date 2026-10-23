@@ -32,6 +32,7 @@
   padding: 24px;
   border: 1px solid var(--color-border);
   border-radius: 12px;
+  box-shadow: 0 2px 6px #20293904;
   background: var(--color-surface);
 }
 
@@ -43,7 +44,7 @@
 }
 
 .dashboard__metric-value {
-  margin: 16px 0;
+  color: var(--color-accent);  margin: 16px 0;
   font-size: 36px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
@@ -77,7 +78,7 @@
   width: min(100%, 200px);
   aspect-ratio: 1;
   border-radius: 50%;
-  background: conic-gradient(var(--color-primary) 0deg var(--active-angle), var(--color-sidebar) var(--active-angle) var(--archived-angle), var(--color-border) var(--archived-angle) 360deg);
+  background: conic-gradient(var(--color-primary) 0deg var(--active-angle), var(--color-accent) var(--active-angle) var(--archived-angle), var(--color-border) var(--archived-angle) 360deg);
 }
 
 .dashboard__donut-center {
@@ -126,7 +127,7 @@
 }
 
 .dashboard__legend-marker--archived {
-  background: var(--color-sidebar);
+  background: var(--color-accent);
 }
 
 .dashboard__legend-value {

@@ -1,7 +1,7 @@
 .citizens-status {
   display: inline-block;
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
@@ -25,7 +25,7 @@
   padding: 20px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
-  background: var(--color-surface);
+  background: #f8fafc;
 }
 
 .citizens-filters__field {
@@ -46,7 +46,18 @@
   min-height: 44px;
   padding: 10px 12px;
   border: 1px solid var(--color-border);
-  border-radius: 6px;
-  background: var(--color-surface);
+  border-radius: 8px;
+  background: #f8fafc;
   color: var(--color-text);
+}
+
+.citizens-filters__control:hover {
+  border-color: #8796ab;
+}
+
+.citizens-filters__control:focus-visible {
+  border-color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+  background: var(--color-surface);
 }

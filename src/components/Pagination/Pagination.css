@@ -22,8 +22,8 @@
 
 .pagination__link:hover,
 .pagination__link[aria-current="page"] {
-  background: var(--color-primary);
-  color: var(--color-sidebar);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
 }
 
 .pagination__disabled {

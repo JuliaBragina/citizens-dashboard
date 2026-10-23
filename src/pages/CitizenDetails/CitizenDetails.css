@@ -2,14 +2,18 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 12px;
   background: var(--color-surface);
 }
 
 .citizen-details__header {
   display: grid;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
 }
 
 .citizen-details__sections {
@@ -58,8 +62,8 @@
   height: 80px;
   margin-bottom: 24px;
   border-radius: 50%;
-  background: var(--color-primary);
-  color: var(--color-sidebar);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
   font-size: 28px;
   font-weight: 700;
 }
@@ -96,22 +100,29 @@
 .citizen-details__tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 12px 12px 0 0;
+  background: var(--color-surface);
 }
 
 .citizen-details__tab {
-  padding: 12px 16px;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: var(--color-surface);
-  color: var(--color-text);
+  padding: 16px;
+  border-bottom: 2px solid transparent;
+  color: var(--color-muted);
+  font-weight: 600;
   text-decoration: none;
 }
 
-.citizen-details__tab:hover,
+.citizen-details__tab:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
 .citizen-details__tab[aria-current="page"] {
-  background: var(--color-primary);
-  color: var(--color-sidebar);
+  border-bottom-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .citizen-details__related {
@@ -120,7 +131,7 @@
   gap: 16px;
   padding: 24px;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 12px;
   background: var(--color-surface);
 }
 
