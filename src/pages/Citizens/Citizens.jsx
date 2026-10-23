@@ -1,3 +1,5 @@
+import Pagination from '../../components/Pagination/Pagination'
+import { paginate } from '../../utils/pagination'
 import { useSearchParams } from 'react-router-dom'
 import DataTable from '../../components/DataTable/DataTable'
 import { formatDate } from '../../components/CitizenSections/sections'
@@ -33,8 +35,11 @@ function Citizens({ citizens }) {
     && (!status || citizen.status === status)
   ))
 
+  const pagination = paginate(filteredCitizens, params.get('page'))
+
   function updateFilter(key, value) {
     const next = new URLSearchParams(params)
+    next.delete('page')
     if (value) next.set(key, value)
     else next.delete(key)
     setParams(next, { replace: true })
@@ -42,7 +47,7 @@ function Citizens({ citizens }) {
 
   function resetFilters() {
     const next = new URLSearchParams(params)
-    for (const key of ['query', 'region', 'status']) next.delete(key)
+    for (const key of ['query', 'region', 'status', 'page']) next.delete(key)
     setParams(next, { replace: true })
   }
 
@@ -86,14 +91,15 @@ function Citizens({ citizens }) {
         <button className="button" type="button" onClick={resetFilters} disabled={!query && !region && !status}>Сбросить</button>
       </form>
 
-      <p className="text" role="status">Найдено: {filteredCitizens.length} из {citizens.length}</p>
+      <p className="text" role="status">Найдено: {filteredCitizens.length} из {citizens.length}. Показано: {pagination.from}–{pagination.to}</p>
 
       {filteredCitizens.length ? <DataTable
         caption="Картотека граждан"
         columns={columns}
-        rows={filteredCitizens}
+        rows={pagination.rows}
         getRowLink={(citizen) => `/citizens/${citizen.id}`}
       /> : <p className="text">Граждане не найдены. Измените условия поиска или сбросьте фильтры.</p>}
+      <Pagination page={pagination.page} pageCount={pagination.pageCount} />
     </section>
   )
 }
