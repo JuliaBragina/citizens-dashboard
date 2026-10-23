@@ -1,7 +1,6 @@
 const dateFormatter = new Intl.DateTimeFormat('ru-RU', { timeZone: 'UTC' })
 export const formatDate = (value) => value ? dateFormatter.format(new Date(value)) : 'Не указано'
 
-// Описание разделов и полей связанных записей.
 export const sections = [
   { id: 'main', label: 'Основные сведения' },
   {
